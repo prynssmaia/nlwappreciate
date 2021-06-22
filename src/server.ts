@@ -1,16 +1,13 @@
 import "reflect-metadata"
 import express from "express"
+import { router } from "./routes"
 
 import "./database"
 
 const app = express()
 
-app.get("/", (req,res) => {
-    return res.send("Hello NLW NODE")
-})
+app.use(express.json())
 
-app.post("/post", (req,res) => {
-    return res.send("hello nlw post")
-})
+app.use(router)
 
 app.listen(4576, () => console.log("Server is running at localhost:4576"))
