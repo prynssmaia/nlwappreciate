@@ -1,0 +1,5 @@
+{
+    "type": "sqlite",
+    "password": "test",
+    "database": "src/database/database.sqlite"
+ }
